@@ -72,8 +72,9 @@
       left: 50%;
       top: 51%;
       transform: translate(-50%, -50%);
-      width: min(92vw, 620px);
-      padding: 20px 14px 18px;
+      width: min(94vw, 620px);
+      max-width: calc(100vw - 18px);
+      padding: 20px 8px 18px;
       text-align: center;
       color: white;
       text-shadow:
@@ -93,7 +94,7 @@
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       align-items: end;
-      gap: clamp(4px, 1.2vw, 10px);
+      gap: clamp(2px, .8vw, 7px);
       margin: 0 auto;
     }
 
@@ -104,7 +105,7 @@
     .num {
       display: block;
       font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(47px, 14.8vw, 96px);
+      font-size: clamp(39px, 12.5vw, 78px);
       font-weight: 500;
       line-height: .92;
       letter-spacing: -.055em;
@@ -160,8 +161,8 @@
     }
 
     @keyframes breathe {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.018); }
+      0%, 100% { transform: translate(-50%, -50%) scale(1); }
+      50% { transform: translate(-50%, -50%) scale(1.018); }
     }
 
     .arrived {
